@@ -56,7 +56,7 @@ class _HotelListScreenState extends State<HotelListScreen> {
         });
         return cards;
       });
-    }
+    } else {}
   }
 
   void _sortCardsPrice() {
@@ -271,6 +271,7 @@ class _HotelListScreenState extends State<HotelListScreen> {
                   onTap: () {
                     // Handle sorting by recommendations
                     setState(() {
+                      line = 0;
                       selectedSortIndex = selectedSortIndex == 0 ? -1 : 0;
                     });
                     Future.delayed(const Duration(milliseconds: 300), () {
@@ -290,6 +291,7 @@ class _HotelListScreenState extends State<HotelListScreen> {
                         ? const Icon(Icons.check, color: Colors.green)
                         : null,
                     onTap: () {
+                      line = 0;
                       // Handle sorting by recommendations
                       setState(() {
                         selectedSortIndex = selectedSortIndex == 1 ? -1 : 1;
@@ -310,6 +312,7 @@ class _HotelListScreenState extends State<HotelListScreen> {
                         ? const Icon(Icons.check, color: Colors.green)
                         : null,
                     onTap: () {
+                      line = 0;
                       // Handle sorting by recommendations
                       setState(() {
                         selectedSortIndex = selectedSortIndex == 2 ? -1 : 2;
@@ -330,6 +333,7 @@ class _HotelListScreenState extends State<HotelListScreen> {
                         ? const Icon(Icons.check, color: Colors.green)
                         : null,
                     onTap: () {
+                      line = 0;
                       // Handle sorting by recommendations
                       setState(() {
                         selectedSortIndex = selectedSortIndex == 3 ? -1 : 3;
@@ -351,6 +355,7 @@ class _HotelListScreenState extends State<HotelListScreen> {
                         : null,
                     onTap: () {
                       setState(() {
+                        line = 0;
                         selectedSortIndex = selectedSortIndex == 4 ? -1 : 4;
                         _sortCards(); // Reload hotels after sorting option is changed
                       });
@@ -371,6 +376,7 @@ class _HotelListScreenState extends State<HotelListScreen> {
                     onTap: () {
                       // Handle sorting by recommendations
                       setState(() {
+                        line = 0;
                         selectedSortIndex = selectedSortIndex == 5 ? -1 : 5;
                         _sortCardsPrice();
                       });
@@ -392,6 +398,7 @@ class _HotelListScreenState extends State<HotelListScreen> {
                     onTap: () {
                       // Handle sorting by recommendations
                       setState(() {
+                        line = 0;
                         selectedSortIndex = selectedSortIndex == 6 ? -1 : 6;
                       });
                       Future.delayed(const Duration(milliseconds: 300), () {
